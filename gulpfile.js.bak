@@ -1,0 +1,25 @@
+const gulp = require('gulp');
+const rename = require('gulp-rename');
+
+// gulp.task(taskname,callback) 部署任务
+gulp.task('default', () => {
+    return new Promise((resolve, reject) => {
+        console.log('hello word');
+        resolve();
+    })
+})
+gulp.task('sayhello', () => {
+    return new Promise((resolve, reject) => {
+        console.log('hello');
+        resolve();
+    })
+})
+gulp.task('copyindex', () => {
+    return gulp.src('./demo.html')
+        .pipe(gulp.dest('./laji'))
+})
+gulp.task('renamedemo', () => {
+    return gulp.src('./demo.html')
+        .pipe(rename('demo.min.html'))
+        .pipe(gulp.dest('./laji'));
+})

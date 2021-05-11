@@ -1,0 +1,263 @@
+html,
+body {
+  height: 100%;
+  background-color: #f9f9f9;
+}
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  height: auto;
+  display: box;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -o-box;
+  box-align: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-box-align: center;
+  -o-box-align: center;
+  box-pack: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-box-pack: center;
+  -o-box-pack: center;
+}
+.wrapper .wrap {
+  padding-bottom: 90px;
+}
+.wrapper .wrap .layout {
+  width: 854px;
+}
+.wrapper .wrap .layout .layout-container {
+  background: #fff;
+  padding: 0 34px 30px;
+  min-height: 400px;
+}
+.wrapper .wrap .layout .layout-container .layout-logo {
+  height: 48px;
+  background: url(../img/milogo.png) no-repeat center;
+  margin-bottom: 40px;
+}
+.wrapper .wrap .layout .layout-container .layout-title {
+  font-size: 30px;
+  text-align: center;
+  color: black;
+}
+.wrapper .wrap .layout .layout-container .input-top {
+  width: 332px;
+  padding: 30px 0;
+  margin: 0 auto;
+  font-size: 14px;
+  color: #333;
+}
+.wrapper .wrap .layout .layout-container .input-top .country {
+  height: 44px;
+  border: 1px solid #e8e8e8;
+  margin: 5px 0;
+  cursor: pointer;
+  position: relative;
+}
+.wrapper .wrap .layout .layout-container .input-top .country .country-icon {
+  height: 42px;
+  width: 43px;
+  border-left: 1px solid #e8e8e8;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.wrapper .wrap .layout .layout-container .input-top .country .country-icon div {
+  width: 18px;
+  height: 18px;
+  border: 1px solid #e8e8e8;
+  border-radius: 50%;
+  margin-left: 12px;
+  margin-top: 12px;
+  text-align: center;
+}
+.wrapper .wrap .layout .layout-container .input-top .country .country-icon div span {
+  display: block;
+  margin: 0 auto;
+  color: #e8e8e8;
+  transform: rotate(180deg) scaleY(0.5);
+  margin-top: -2px;
+  font-size: 14px;
+}
+.wrapper .wrap .layout .layout-container .input-top .country .country-input {
+  height: 42px;
+  margin-right: 43px;
+  font-size: 14px;
+  line-height: 42px;
+  padding-left: 20px;
+}
+.wrapper .wrap .layout .layout-container .input-top .country .country-selector {
+  position: absolute;
+  top: 42px;
+  left: -1px;
+  width: 332px;
+  border: 1px solid #e8e8e8;
+  height: 280px;
+  background-color: #fff;
+  padding-top: 10px;
+  overflow: scroll;
+  z-index: 20;
+}
+.wrapper .wrap .layout .layout-container .input-top .country .country-selector input {
+  display: block;
+  margin: 0 auto;
+  width: 296px;
+  height: 34px;
+  border: 1px solid #e8e8e8;
+  margin-bottom: 10px;
+}
+.wrapper .wrap .layout .layout-container .input-top .country .country-selector div .selector-header {
+  background: #fcdecc;
+  padding-left: 10px;
+  margin-bottom: 6px;
+  line-height: 30px;
+  color: #ef5b00 !important;
+}
+.wrapper .wrap .layout .layout-container .input-top .country .country-selector ul li {
+  padding: 0 10px;
+  line-height: 39px;
+  clear: both;
+  overflow: hidden;
+  color: #000;
+  border-bottom: 1px solid #e0e0e0;
+  *zoom: 1;
+  cursor: pointer;
+}
+.wrapper .wrap .layout .layout-container .input-top .phone {
+  cursor: pointer;
+}
+.wrapper .wrap .layout .layout-container .input-top .phone .phone-input {
+  height: 44px;
+  border: 1px solid #e8e8e8;
+  margin: 10px 0;
+  position: relative;
+}
+.wrapper .wrap .layout .layout-container .input-top .phone .phone-input .phone-selector {
+  height: 42px;
+  width: 71px;
+  position: absolute;
+  border-right: 1px solid #e0e0e0;
+  left: 0;
+  top: 0;
+  line-height: 42px;
+  padding-left: 15px;
+  font-size: 13px;
+  position: relative;
+}
+.wrapper .wrap .layout .layout-container .input-top .phone .phone-input .phone-selector span {
+  position: absolute;
+  top: 13px;
+  right: 12px;
+  height: 0;
+  width: 0;
+  border-style: solid;
+  border-width: 5px;
+  border-color: #e0e0e0 transparent transparent transparent;
+  margin-top: 5px;
+}
+.wrapper .wrap .layout .layout-container .input-top .phone .phone-input .selector-option {
+  position: absolute;
+  top: 42px;
+  left: -1px;
+  width: 332px;
+  border: 1px solid #e8e8e8;
+  height: 280px;
+  background-color: #fff;
+  padding-top: 10px;
+  overflow: scroll;
+  z-index: 20;
+}
+.wrapper .wrap .layout .layout-container .input-top .phone .phone-input .selector-option input {
+  display: block;
+  margin: 0 auto;
+  width: 296px;
+  height: 34px;
+  border: 1px solid #e8e8e8;
+  margin-bottom: 10px;
+}
+.wrapper .wrap .layout .layout-container .input-top .phone .phone-input .selector-option div .selector-header {
+  background: #fcdecc;
+  padding-left: 10px;
+  margin-bottom: 6px;
+  line-height: 30px;
+  color: #ef5b00 !important;
+}
+.wrapper .wrap .layout .layout-container .input-top .phone .phone-input .selector-option ul li {
+  padding: 0 10px;
+  line-height: 39px;
+  clear: both;
+  overflow: hidden;
+  color: #000;
+  border-bottom: 1px solid #e0e0e0;
+  *zoom: 1;
+  cursor: pointer;
+}
+.wrapper .wrap .layout .layout-container .input-top .phone .phone-input > input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 42px;
+  width: 258px;
+  padding-left: 15px;
+}
+.wrapper .wrap .layout .layout-container .input-top .phone .phone-tip {
+  color: #ff6700;
+}
+.wrapper .wrap .layout .layout-container .input-top .phone .phone-tip em {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #ff6700;
+  vertical-align: middle;
+  font-size: 12px;
+  text-align: center;
+  line-height: 14px;
+  color: #fff;
+  font-weight: bold;
+  margin-top: -1px;
+}
+.wrapper .wrap .layout .layout-container .input-top p:nth-of-type(2) {
+  display: block;
+  margin-bottom: 10px;
+}
+.wrapper .wrap .layout .layout-container .input-top button {
+  height: 42px;
+  width: 332px;
+  margin-top: 15px;
+  background-color: #ff6700;
+  color: #fff;
+  line-height: 42px;
+  text-align: center;
+}
+.wrapper .wrap .layout .layout-container .input-bottom {
+  text-align: center;
+  padding-top: 40px;
+}
+.wrapper .wrap .layout .layout-container .input-bottom .msg {
+  padding: 10px 0;
+}
+.wrapper .wrap .layout .layout-container .input-bottom .msg a {
+  color: #000;
+  font-weight: bold;
+}
+.footer-bottom {
+  color: #9d9d9d;
+  text-align: center;
+  height: 80px;
+  margin-top: -80px;
+}
+.footer-bottom > div > span {
+  display: inline-block;
+  padding: 0 10px;
+  font-size: 14px;
+}
+.footer-bottom > span {
+  font-size: 14px;
+  display: block;
+  padding: 10px;
+}

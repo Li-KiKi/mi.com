@@ -1,0 +1,100 @@
+html,
+body {
+  height: 100%;
+}
+
+.layout_banner {
+  float: left;
+  height: 100%;
+  width: 375px;
+  background: url(../img/banner.a0e6fbf0.jpg) no-repeat;
+  background-size: cover;
+}
+.layout {
+  margin-left: 375px;
+  height: 100%;
+  position: relative;
+  .layout_header {
+    padding: 20px;
+    overflow: hidden;
+    .layout_title {
+      float: left;
+      height: 40px;
+      font-size: 26px;
+      font-weight: 500;
+      color: #333;
+      line-height: 40px;
+    }
+    .layout_nav {
+      float: right;
+      .nav_item_url,
+      .nav_item {
+        display: inline-block;
+        margin-left: 10px;
+        margin-right: 10px;
+        height: 40px;
+        font-size: 14px;
+        font-weight: 400;
+        color: #838383;
+        line-height: 40px;
+      }
+      .nav_divider {
+        vertical-align: middle;
+        display: inline-block;
+        margin-left: 10px;
+        margin-right: 10px;
+        height: 14px;
+        width: 0;
+        border-right: 1px solid #ddd;
+      }
+    }
+  }
+  .layout_container {
+    padding-top: 88.5px;
+    padding-bottom: 80px;
+    .layout_card {
+      padding: 40px 45px;
+      width: 450px;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+      border-radius: 4px;
+      box-shadow: 0 20px 50px 0 hsl(0deg 0% 64% / 10%);
+      .login-switch {
+        cursor: pointer;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 64px;
+        height: 64px;
+        opacity: 0.4;
+        transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+        border-color: #ff5c00 #ff5c00 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+        border-style: solid;
+        border-width: 32px;
+        &:hover{
+            opacity: 1;
+        }
+      }
+      .ant-tabs {
+        .tabs-list {
+          height: 40px;
+          margin-bottom: 10px;
+          background-color: red;
+        }
+        .tabs-content {
+          height: 470px;
+          background-color: blue;
+        }
+      }
+    }
+  }
+  .layout_copyright {
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    font-size: 12px;
+  }
+}

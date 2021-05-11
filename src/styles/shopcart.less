@@ -1,0 +1,418 @@
+body {
+  background-color: #f5f5f5;
+}
+.shopcar-header {
+  font-size: 12px;
+  border-bottom: 2px solid #ff6700;
+  background: #fff;
+  color: #b0b0b0;
+  height: 102px;
+  .header-container {
+    .header-logo {
+      width: 93px;
+      margin-top: 26px;
+      float: left;
+      a {
+        position: relative;
+        display: block;
+        width: 48px;
+        height: 48px;
+        overflow: hidden;
+        text-align: left;
+        text-indent: -9999em;
+        background: url(../img/logo-mi2.png);
+        background-size: 100%;
+      }
+    }
+    .header-title {
+      float: left;
+      margin-top: 26px;
+      height: 48px;
+      h2 {
+        float: left;
+        line-height: 48px;
+        margin-bottom: 0;
+        font-size: 28px;
+        font-weight: 400;
+        color: #333;
+      }
+      p {
+        float: left;
+        height: 20px;
+        line-height: 20px;
+        margin-top: 20px;
+        margin-left: 15px;
+        color: #757575;
+      }
+    }
+    .header-btn {
+      float: right;
+      height: 40px;
+      line-height: 40px;
+      margin-top: 30px;
+    }
+  }
+}
+.shopcar-main {
+  padding: 40px 0;
+  .main-container {
+    .main-wrap {
+      .goods-list {
+        background-color: #fff;
+        .list-header {
+          height: 70px;
+          line-height: 70px;
+          padding-right: 26px;
+          color: #424242;
+          display: flex;
+          font-size: 14px;
+        }
+        .list-body {
+          .body-item {
+            .item-box {
+              padding: 15px 26px 15px 0;
+              border-top: 1px solid #e0e0e0;
+              // 商品主体
+              .item-table {
+                display: flex;
+                align-items: center;
+                .col-name {
+                  margin-top: 8px;
+                  margin-bottom: 8px;
+                  font-size: 18px;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                  overflow: hidden;
+                  a {
+                    color: black;
+                  }
+                }
+                .col-img {
+                  height: 80px;
+                  padding-right: 40px;
+                }
+                .col-num {
+                  .change-num {
+                    width: 148px;
+                    height: 38px;
+                    border: 1px solid #e0e0e0;
+                    text-align: center;
+                    background-color: #fff;
+                    display: flex;
+                    a {
+                      display: block;
+                      width: 36px;
+                      height: 36px;
+                      line-height: 36px;
+                      color: #757575;
+                      font-size: 20px;
+                      -webkit-transition: all 0.3s;
+                      transition: all 0.3s;
+                    }
+                    input {
+                      width: 76px;
+                      height: 36px;
+                      line-height: 36px;
+                      color: #424242;
+                      font-size: 16px;
+                      text-align: center;
+                    }
+                  }
+                }
+                .col-action {
+                  font-size: 18px;
+                }
+                .col-total {
+                  color: #ff6700;
+                  font-size: 16px;
+                }
+                .col-price {
+                  font-size: 16px;
+                }
+              }
+              // 赠品
+              .item-sub {
+                padding-top: 15px;
+                margin-left: 110px;
+                position: relative;
+                .sub-box {
+                  margin-bottom: 2px;
+                  .sub-table {
+                    display: flex;
+                    background-color: #f5f5f5;
+                    align-items: center;
+                    padding: 15px 0;
+                    .col-img {
+                      padding-left: 15px;
+                    }
+                    .col-action {
+                      font-size: 18px;
+                    }
+                    .col-total {
+                      color: #ff6700;
+                      font-size: 16px;
+                    }
+                    .col-price {
+                      font-size: 16px;
+                    }
+                  }
+                  .arrow {
+                    position: absolute;
+                    top: 5px;
+                    left: 35px;
+                    width: 0;
+                    height: 0;
+                    border-width: 0 11px 10px;
+                    border-style: solid;
+                    border-color: transparent transparent #f5f5f5;
+                    overflow: hidden;
+                  }
+                }
+              }
+              // 增值服务添加模块
+              .service-info-content {
+                .service-info {
+                  margin-left: 110px;
+                  margin-bottom: 2px;
+                  .service-info-table {
+                    display: flex;
+                    background-color: #f5f5f5;
+                    align-items: center;
+                    padding: 15px 0;
+                    .col-img {
+                      padding-left: 15px;
+                    }
+                    .col-action {
+                      font-size: 18px;
+                    }
+                    .col-total {
+                      color: #ff6700;
+                      font-size: 16px;
+                    }
+                    .col-price {
+                      font-size: 16px;
+                    }
+                  }
+                }
+              }
+              // 增值服务
+              .item-sub-service {
+                padding-top: 15px;
+                margin-left: 110px;
+                position: relative;
+                .extent-buy {
+                  height: 50px;
+                  line-height: 48px;
+                  border: 1px solid #e0e0e0;
+                  padding-left: 20px;
+                  margin-bottom: -1px;
+                  color: #424242;
+                  cursor: pointer;
+                  font-size: 14px;
+                  i {
+                    margin-right: 15px;
+                    display: inline-block;
+                    width: 22px;
+                    height: 22px;
+                    font-size: 22px;
+                    line-height: 20px;
+                    border-radius: 11px;
+                    text-align: center;
+                    background: #ff6700;
+                    color: #fff;
+                    vertical-align: middle;
+                    position: relative;
+                    top: -1px;
+                  }
+                  a {
+                    margin-left: 20px;
+                    color: #ff6700;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .wrap-bar {
+        height: 50px;
+        text-align: right;
+        background-color: #fff;
+        position: relative;
+        margin-top: 20px;
+        .bar-left {
+          float: left;
+          font-size: 14px;
+          a {
+            line-height: 50px;
+            margin-left: 32px;
+            transition: color 0.3s;
+            &:hover {
+              color: #ff6700;
+            }
+          }
+          span {
+            margin-left: 16px;
+            padding-left: 16px;
+            border-left: 1px solid #eee;
+            color: #757575;
+            i {
+              color: #ff6700;
+            }
+          }
+        }
+        .total-price {
+          padding-left: 13px;
+          color: #ff6700;
+          em {
+            font-style: normal;
+            font-size: 30px;
+          }
+          a {
+            display: inline-block;
+            text-align: center;
+            width: 200px;
+            height: 48px;
+            line-height: 48px;
+            font-size: 18px;
+            margin-left: 50px;
+            vertical-align: top;
+            background: #ff6700;
+            border-color: #ff6700;
+            color: #fff;
+          }
+        }
+      }
+      .col-check {
+        width: 110px;
+        i {
+          display: inline-block;
+          width: 18px;
+          height: 18px;
+          line-height: 18px;
+          border: 1px solid #e0e0e0;
+          margin-left: 24px;
+          margin-right: 15px;
+          background-color: #fff;
+          color: black;
+          font-size: 15px;
+          text-align: center;
+          vertical-align: middle;
+          position: relative;
+          top: -1px;
+          cursor: pointer;
+        }
+      }
+      .col-img {
+        width: 120px;
+      }
+      .col-name {
+        width: 380px;
+      }
+      .col-price {
+        width: 158px;
+        padding-right: 18px;
+        text-align: center;
+        color: #424242;
+      }
+      .col-num {
+        width: 150px;
+        text-align: center;
+      }
+      .col-total {
+        width: 201px;
+        padding-right: 81px;
+        text-align: right;
+      }
+      .col-action {
+        width: 80px;
+        text-align: center;
+      }
+    }
+    .main-recommend {
+      margin-top: 60px;
+      > p {
+        position: relative;
+        margin: 0;
+        height: 50px;
+        font-size: 30px;
+        color: #757575;
+        border-top: 1px solid #e0e0e0;
+        span {
+          position: absolute;
+          top: -20px;
+          left: 372px;
+          height: 40px;
+          width: 482px;
+          line-height: 40px;
+          text-align: center;
+          display: block;
+          background-color: #f5f5f5;
+        }
+      }
+      div {
+        ul {
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          li {
+            width: 234px;
+            height: 300px;
+            margin-bottom: 14px;
+            a {
+              display: block;
+              width: 100%;
+              height: 100%;
+              padding: 20px 0;
+              text-align: center;
+              background-color: #fff;
+              position: relative;
+              overflow: hidden;
+              &:hover .btn {
+                bottom: 20px;
+              }
+              > img {
+                display: block;
+                margin: 0 auto 18px;
+              }
+              .title {
+                font-size: 14px;
+                font-weight: 400;
+                color: #333;
+                margin-bottom: 3px;
+              }
+              .desc {
+                margin-bottom: 10px;
+                height: 18px;
+                font-size: 12px;
+                color: #b0b0b0;
+              }
+              .price {
+                color: #ff6700;
+                margin-bottom: 14px;
+                font-size: 14px;
+              }
+              .btn {
+                position: absolute;
+                bottom: -50px;
+                left: 50%;
+                transform: translateX(-50%);
+                border: 1px solid #ff6700;
+                background-color: #fff;
+                width: 85px;
+                height: 30px;
+                line-height: 28px;
+                text-align: center;
+                transition: all 0.2s linear;
+              }
+            }
+
+            .a-none {
+              padding: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
