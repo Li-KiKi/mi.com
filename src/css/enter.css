@@ -50,7 +50,7 @@ body {
   border-right: 1px solid #ddd;
 }
 .layout .layout_container {
-  padding-top: 88.5px;
+  padding-top: 60px;
   padding-bottom: 80px;
 }
 .layout .layout_container .layout_card {
@@ -75,42 +75,246 @@ body {
   border-style: solid;
   border-width: 32px;
 }
+.layout .layout_container .layout_card .login-switch p {
+  width: 90px;
+  height: 30px;
+  background-color: #ff6700;
+  border-radius: 4px;
+  position: absolute;
+  top: -20px;
+  left: -125px;
+  text-align: center;
+  line-height: 30px;
+  color: #fff;
+  font-size: 14px;
+  transform-origin: right top;
+  transform: scale(0.6);
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.layout .layout_container .layout_card .login-switch p::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #ff6700;
+  position: absolute;
+  right: 0;
+  top: 8px;
+  transform-origin: right top;
+  transform: rotate(-45deg);
+}
 .layout .layout_container .layout_card .login-switch:hover {
   opacity: 1;
+}
+.layout .layout_container .layout_card .login-switch:hover p {
+  transform: scale(1);
+  opacity: 1;
+}
+.layout .layout_container .layout_card .login-switch img {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: -23px;
+  top: -23px;
 }
 .layout .layout_container .layout_card .ant-tabs {
   position: relative;
 }
 .layout .layout_container .layout_card .ant-tabs .tabs-list {
   height: 40px;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
   font-size: 22px;
   color: black;
+}
+.layout .layout_container .layout_card .ant-tabs .tabs-list span {
+  margin-right: 20px;
 }
 .layout .layout_container .layout_card .ant-tabs .tabs-slide {
   height: 5px;
   width: 300px;
-  background-color: blue;
   position: absolute;
   left: 0;
   top: 35px;
 }
-.layout .layout_container .layout_card .ant-tabs .tabs-content > div {
-  border-radius: 3px;
-  margin-bottom: 52px;
+.layout .layout_container .layout_card .ant-tabs .tabs-slide div {
+  height: 4px;
+  width: 42px;
+  background-color: #ff6700;
+  border-radius: 2px;
+}
+.layout .layout_container .layout_card .ant-tabs .tabs-content > .tabs-box {
+  border-radius: 5px;
   height: 60px;
-  background-color: #ff5c00;
+  margin-bottom: 10px;
+  margin-top: 22px;
+}
+.layout .layout_container .layout_card .ant-tabs .tabs-content > p {
+  color: red;
+}
+.layout .layout_container .layout_card .ant-tabs .tabs-content .tabs-userinput {
+  cursor: text;
+  background-color: #f9f9f9;
+  padding: 7px 20px 0;
+  transition: all 0.5s;
+  border: 1px solid #f9f9f9;
+}
+.layout .layout_container .layout_card .ant-tabs .tabs-content .tabs-userinput p {
+  color: #aaaaaa;
+  transform-origin: left top;
+  transform: scale(1.4) translateY(7px);
+  transition: all 0.5s;
+}
+.layout .layout_container .layout_card .ant-tabs .tabs-content .tabs-userinput input {
+  width: 100%;
+  margin-top: 5px;
+  background-color: transparent;
+  font-size: 16px;
+  height: 24px;
+}
+.layout .layout_container .layout_card .ant-tabs .tabs-content .tabs-btn {
+  color: #fff;
+  cursor: pointer;
+  line-height: 60px;
+  text-align: center;
+  font-size: 16px;
+  background-color: #ffbe99;
+}
+.layout .layout_container .layout_card .ant-tabs .tabs-content .tabs-btn-bottom {
+  display: flex;
+  margin-bottom: 40px;
+  font-size: 16px;
+  justify-content: space-between;
+}
+.layout .layout_container .layout_card .ant-tabs .tabs-content .tabs-btn-bottom a {
+  color: #ff6700;
+}
+.layout .layout_container .layout_card .ant-tabs .tabs-content .tabs-btn-login {
+  margin-bottom: 10px;
+}
+.layout .layout_container .layout_card .ant-tabs .tabs-seebox {
+  width: 350px;
+  overflow: hidden;
+}
+.layout .layout_container .layout_card .ant-tabs .tabs-seebox .tabs-longbox {
+  width: 700px;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+.layout .layout_container .layout_card .ant-tabs .tabs-seebox .tabs-longbox > div {
+  width: 350px;
+  position: relative;
+}
+.layout .layout_container .layout_card .ant-tabs .tabs-seebox .tabs-longbox .tabs-left {
+  float: left;
+  height: 470px;
+}
+.layout .layout_container .layout_card .ant-tabs .tabs-seebox .tabs-longbox .tabs-right {
+  float: right;
+}
+.layout .layout_container .layout_card .ant-tabs .tabs-seebox .tabs-longbox .tabs-right > p {
+  text-align: center;
+  margin-bottom: 100px;
+  font-size: 14px;
+}
+.layout .layout_container .layout_card .ant-tabs .tabs-seebox .tabs-longbox .tabs-right .tabs-content {
+  position: relative;
+}
+.layout .layout_container .layout_card .ant-tabs .tabs-seebox .tabs-longbox .tabs-right .tabs-content .tabs-country {
+  position: relative;
+}
+.layout .layout_container .layout_card .ant-tabs .tabs-seebox .tabs-longbox .tabs-right .tabs-content .tabs-country > p {
+  transform: scale(1);
+  margin-bottom: 3px;
+}
+.layout .layout_container .layout_card .ant-tabs .tabs-seebox .tabs-longbox .tabs-right .tabs-content .tabs-country > span {
+  font-size: 16px;
+  color: black;
+}
+.layout .layout_container .layout_card .ant-tabs .tabs-seebox .tabs-longbox .tabs-right .tabs-content .tabs-country .tabs-country-menu {
+  width: 100%;
+  height: 425px;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  top: 60px;
+  z-index: 1;
+}
+.layout .layout_container .layout_card .ant-tabs .tabs-seebox .tabs-longbox .tabs-right .tabs-content .tabs-country .tabs-country-menu .country-menu-input {
+  height: 62px;
+  padding: 5px 20px;
+}
+.layout .layout_container .layout_card .ant-tabs .tabs-seebox .tabs-longbox .tabs-right .tabs-content .tabs-country .tabs-country-menu .country-menu-input input {
+  width: 310px;
+  height: 42px;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  padding-left: 30px;
+}
+.layout .layout_container .layout_card .ant-tabs .tabs-seebox .tabs-longbox .tabs-right .tabs-content .tabs-country .tabs-country-menu .country-menu-scroll {
+  height: 363px;
+  overflow-y: scroll;
+}
+.layout .layout_container .layout_card .ant-tabs .tabs-seebox .tabs-longbox .tabs-right .tabs-content .tabs-country .tabs-country-menu .country-menu-scroll a {
+  display: block;
+  height: 60px;
+  line-height: 60px;
+  padding-left: 20px;
+  font-size: 16px;
+}
+.layout .layout_container .layout_card .ant-tabs .tabs-seebox .tabs-longbox .tabs-right .tabs-content .tabs-country .tabs-country-menu .country-menu-scroll a:hover {
+  background-color: #fff3e6;
+}
+.layout .layout_container .layout_card .ant-tabs .tabs-seebox .tabs-longbox .tabs-right .tabs-content .tabs-phone-menu {
+  width: 140px;
+  height: 60px;
+  position: absolute;
+  left: 0;
+  top: 82px;
+  border-radius: 5px 0 0 5px;
+  padding-left: 21px;
+  padding-top: 8px;
+}
+.layout .layout_container .layout_card .ant-tabs .tabs-seebox .tabs-longbox .tabs-right .tabs-content .tabs-phone-menu p {
+  transform: scale(1);
+  margin-bottom: 3px;
+}
+.layout .layout_container .layout_card .ant-tabs .tabs-seebox .tabs-longbox .tabs-right .tabs-content .tabs-phone-menu span {
+  font-size: 16px;
+  color: black;
+}
+.layout .layout_container .layout_card .ant-tabs .tabs-seebox .tabs-longbox .tabs-right .tabs-content .tabs-phone {
+  padding-left: 160px;
+}
+.layout .layout_container .layout_card .ant-tabs .tabs-seebox .tabs-longbox .tabs-right .tabs-content .tabs-code {
+  position: relative;
+  padding-right: 150px;
+}
+.layout .layout_container .layout_card .ant-tabs .tabs-seebox .tabs-longbox .tabs-right .tabs-content .tabs-code .tabs-code-btn {
+  width: 120px;
+  height: 58px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-radius: 0 5px 5px 0;
+  color: #ff6700;
+  text-align: center;
+  line-height: 58px;
+  cursor: pointer;
 }
 .layout .layout_container .layout_card .ant-tabs .tabs-others {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translate(-50%);
   text-align: center;
 }
-.layout .layout_container .layout_card .ant-tabs .tabs-others a {
-  display: inline-block;
-  width: 47px;
-  height: 47px;
-  border-radius: 50%;
-  background-color: red;
-  margin: 0 10px;
+.layout .layout_container .layout_card .ant-tabs .tabs-others p {
+  font-size: 16px;
+  color: #aaaaaa;
+  margin-bottom: 15px;
+}
+.layout .layout_container .layout_card2 {
+  height: auto;
 }
 .layout .layout_copyright {
   text-align: center;
