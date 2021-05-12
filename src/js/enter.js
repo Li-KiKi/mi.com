@@ -59,7 +59,7 @@ $(function() {
     $('.tabs-country').on('click', function() {
         $('.tabs-country-menu').toggleClass('hide')
     })
-    $('.tabs-country').focusout(function() {
+    $('.tabs-country').blur(function() {
         $('#tabs-country').css('box-shadow', '0 0 0 black')
         $('#tabs-country').css('border', '1px solid rgb(249,249,249)')
     })
