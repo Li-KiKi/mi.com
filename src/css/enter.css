@@ -54,7 +54,7 @@ body {
   padding-bottom: 80px;
 }
 .layout .layout_container .layout_card {
-  padding: 40px 45px;
+  padding: 40px 50px;
   width: 450px;
   margin: 0 auto;
   position: relative;
@@ -78,14 +78,39 @@ body {
 .layout .layout_container .layout_card .login-switch:hover {
   opacity: 1;
 }
+.layout .layout_container .layout_card .ant-tabs {
+  position: relative;
+}
 .layout .layout_container .layout_card .ant-tabs .tabs-list {
   height: 40px;
-  margin-bottom: 10px;
-  background-color: red;
+  margin-bottom: 25px;
+  font-size: 22px;
+  color: black;
 }
-.layout .layout_container .layout_card .ant-tabs .tabs-content {
-  height: 470px;
+.layout .layout_container .layout_card .ant-tabs .tabs-slide {
+  height: 5px;
+  width: 300px;
   background-color: blue;
+  position: absolute;
+  left: 0;
+  top: 35px;
+}
+.layout .layout_container .layout_card .ant-tabs .tabs-content > div {
+  border-radius: 3px;
+  margin-bottom: 52px;
+  height: 60px;
+  background-color: #ff5c00;
+}
+.layout .layout_container .layout_card .ant-tabs .tabs-others {
+  text-align: center;
+}
+.layout .layout_container .layout_card .ant-tabs .tabs-others a {
+  display: inline-block;
+  width: 47px;
+  height: 47px;
+  border-radius: 50%;
+  background-color: red;
+  margin: 0 10px;
 }
 .layout .layout_copyright {
   text-align: center;

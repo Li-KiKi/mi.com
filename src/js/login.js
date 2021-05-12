@@ -16,9 +16,17 @@ $(function() {
     $('.phone-selector').on('click', function() {
         $('.selector-option').toggleClass('hide');
     })
+    $('.phone-text').click(function() {
+        if ($('.phone-text').val()) {
+            $('.phone-text').keydown(function(ev) {
+                if (ev.keyCode == 8) changeBack(1)
+            })
+        }
+    })
     $('.phone-text').blur(function() {
         if (!$('.phone-text').val()) {
             changeTo(0)
+            $('.phone-tip').eq(1).addClass('hide')
         }
         if ($('.phone-text').val()) {
             reg.test($('.phone-text').val()) ? changeBack(1) : changeTo(1);
