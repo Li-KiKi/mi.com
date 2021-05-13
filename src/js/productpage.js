@@ -59,7 +59,7 @@ $(function() {
                     <div class="service service-one">
                         <h2>选择小米提供的尊享服务</h2>
                         <ul>
-                            <li class="bcg" data-price="949">
+                            <li class="bcg zunxiang" data-price="949">
                                 <div class="dot">
                                     <div>√</div>
                                 </div>
@@ -83,7 +83,7 @@ $(function() {
                     <div class="service service-two">
                         <h2>选择小米提供的意外保护</h2>
                         <ul>
-                            <li class="bcg" data-price="399">
+                            <li class="bcg suiping" data-price="399">
                                 <div class="dot">
                                     <div>√</div>
                                 </div>
@@ -102,7 +102,7 @@ $(function() {
                                     <div>399元</div>
                                 </div>
                             </li>
-                            <li class="bcg" data-price="699">
+                            <li class="bcg yiwai" data-price="699">
                                 <div class="dot">
                                     <div>√</div>
                                 </div>
@@ -126,7 +126,7 @@ $(function() {
                     <div class="service service-three">
                         <h2>选择小米提供的延长保修</h2>
                         <ul>
-                            <li class="bcg" data-price="249">
+                            <li class="bcg yanbao" data-price="249">
                                 <div class="dot">
                                     <div>√</div>
                                 </div>
@@ -233,14 +233,14 @@ $(function() {
                     <ul>
                         <li>
                             小米11 Ultra 8GB+256GB 陶瓷黑
-                            <span>5999元</span>
+                            <span>${res.price}元</span>
                         </li>
                     </ul>
                     <ul></ul>
                     <ul></ul>
                     <ul></ul>
                     <ul></ul>
-                    <div class="buy-price">总计：5999元</div>
+                    <div class="buy-price">总计：${res.price}元</div>
                 </div>
                 <div class="buy-btn">
                     <a href="#">加入购物车</a>
@@ -256,5 +256,13 @@ $(function() {
     });
     $('.product-main').on('click', '.buy-service .service ul li', function(ev) {
         $(this).addClass('bco').removeClass('bcg').siblings().removeClass('bco').addClass('bcg');
+        let subprice = 0;
+        $('.buy-service .service ul li').each(function() {
+            if ($(this).css('border') === "1px solid rgb(255, 103, 0)") {
+                subprice = subprice + parseInt(this.dataset.price)
+            }
+        })
+        let allprice = subprice + parseInt($('.main-right').children('p').eq(2).html())
+        $('.buy-price').html(`总计：${allprice}元`)
     });
 })
