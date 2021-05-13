@@ -139,3 +139,28 @@ $(function() {
         $(this).siblings().children().css('opacity', 0)
     })
 })
+
+
+
+$(function() {
+    $.ajax({
+        type: "get",
+        url: "../../interface/getData.php",
+        dataType: "json",
+        success: function(res) {
+            let temp = '';
+            res.forEach((elm, i) => {
+                let arr = elm.showpicture.split('"')
+                temp += `<li>
+                <a href="../html/productpage.html?id=${elm.id}">
+                    <img class="lazy" src="../${arr[3]}" alt="small" style="height: 160px;width: 160px;">
+                    <h3 class="title">${elm.title}</h3>
+                    <p class="desc">${elm.showtip}</p>
+                    <p class="price">${elm.showprice}</p>
+                </a>
+            </li>`
+            })
+            $('.right-list-phone').append(temp)
+        }
+    });
+})

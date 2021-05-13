@@ -73,6 +73,7 @@
   font-size: 18px;
   color: #ff6700;
   padding: 12px 0 10px;
+  border-bottom: 1px solid #e0e0e0;
 }
 .product-main .main-container .main-right .address {
   margin: 20px 0;
@@ -86,22 +87,6 @@
   margin-bottom: 3px;
 }
 .product-main .main-container .main-right .address div span {
-  margin-right: 10px;
-}
-.product-main .main-container .main-right .zengpin {
-  border-top: 1px solid #e0e0e0;
-  border-bottom: 1px solid #e0e0e0;
-  padding: 10px 0;
-  color: black;
-  font-size: 14px;
-}
-.product-main .main-container .main-right .zengpin > span {
-  display: inline-block;
-  width: 80px;
-  padding: 2px 0;
-  text-align: center;
-  background: #ff6700;
-  color: #fff;
   margin-right: 10px;
 }
 .product-main .main-container .main-right .buy-option .selector {
@@ -142,8 +127,8 @@
   margin-bottom: 11px;
 }
 .product-main .main-container .main-right .buy-service ul li {
+  position: relative;
   margin-top: -1px;
-  border: 1px solid #e0e0e0;
   cursor: pointer;
   font-size: 16px;
   padding: 30px 0;
@@ -295,4 +280,11 @@
   text-align: left;
   font-size: 22px;
   padding: 20px 0;
+}
+.bco {
+  border: 1px solid #ff6700;
+  z-index: 1;
+}
+.bcg {
+  border: 1px solid #e0e0e0;
 }

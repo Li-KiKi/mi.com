@@ -77,6 +77,7 @@
           font-size: 18px;
           color: #ff6700;
           padding: 12px 0 10px;
+          border-bottom: 1px solid #e0e0e0;
         }
       }
       .address {
@@ -91,22 +92,6 @@
           span {
             margin-right: 10px;
           }
-        }
-      }
-      .zengpin {
-        border-top: 1px solid #e0e0e0;
-        border-bottom: 1px solid #e0e0e0;
-        padding: 10px 0;
-        color: black;
-        font-size: 14px;
-        > span {
-          display: inline-block;
-          width: 80px;
-          padding: 2px 0;
-          text-align: center;
-          background: #ff6700;
-          color: #fff;
-          margin-right: 10px;
         }
       }
       .buy-option {
@@ -151,8 +136,8 @@
         }
         ul {
           li {
+            position: relative;
             margin-top: -1px;
-            border: 1px solid #e0e0e0;
             cursor: pointer;
             font-size: 16px;
             padding: 30px 0;
@@ -311,4 +296,11 @@
     font-size: 22px;
     padding: 20px 0;
   }
+}
+.bco {
+  border: 1px solid #ff6700;
+  z-index: 1;
+}
+.bcg {
+  border: 1px solid #e0e0e0;
 }

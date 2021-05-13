@@ -52,15 +52,14 @@ $(function() {
         $('.tabs-longbox').children('div').eq(ind).removeClass('hide').siblings().addClass('hide')
         if (ind) {
             $('.tabs-longbox').css('transform', 'translateX(-350px)')
+            $('.tabs-slide').children().css('transform', 'translate(70px)')
         } else {
             $('.tabs-longbox').css('transform', 'translateX(0)')
+            $('.tabs-slide').children().css('transform', 'translate(0)')
         }
+        $(this).css('color', 'black').siblings().css('color', '#bbbbbb')
     })
     $('.tabs-country').on('click', function() {
         $('.tabs-country-menu').toggleClass('hide')
-    })
-    $('.tabs-country').blur(function() {
-        $('#tabs-country').css('box-shadow', '0 0 0 black')
-        $('#tabs-country').css('border', '1px solid rgb(249,249,249)')
     })
 })

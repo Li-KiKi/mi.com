@@ -16,7 +16,7 @@ body {
   position: relative;
   .layout_header {
     padding: 20px;
-    overflow: hidden;
+    height: 40px;
     .layout_title {
       float: left;
       height: 40px;
@@ -24,6 +24,9 @@ body {
       font-weight: 500;
       color: #333;
       line-height: 40px;
+      background: url(../img/logo-mi2.png) no-repeat left center;
+      background-size: 25%;
+      padding-left: 50px;
     }
     .layout_nav {
       float: right;
@@ -37,6 +40,65 @@ body {
         font-weight: 400;
         color: #838383;
         line-height: 40px;
+        position: relative;
+        padding-right: 16px;
+        &:hover{
+          color: #ff6700;
+        }
+      }
+      .nav_item {
+        position: relative;
+        em {
+          position: absolute;
+          right: 0;
+          top: 15px;
+          margin-left: 6px;
+          display: inline-block;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 3px;
+          border-color: transparent transparent #333 #333;
+          // border-color: #333;
+          transform: rotate(-45deg);
+          transition: all 0.3s 0.1s ease;
+        }
+        &:hover{
+          color: #ff6700;
+          border-color: #ff6700;
+        }
+        &:hover em{
+          border-color: #ff6700;
+          border-color: transparent transparent #ff6700 #ff6700;
+        }
+        &:hover em {
+          transform: rotate(135deg);
+        }
+        &:hover .nav_item-list{
+          opacity: 1;
+          height: 70px;
+        }
+        .nav_item-list {
+          overflow: hidden;
+          width: 90px;
+          height: 0px;
+          background-color: #fff;
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+          position: absolute;
+          right: -7px;
+          top: 45px;
+          text-align: center;
+          opacity: 0;
+          transition: all 0.3s 0.1s ease;
+          a {
+            display: block;
+            height: 35px;
+            line-height: 35px;
+            &:hover {
+              background-color: rgb(255,243,230);
+            }
+          }
+        }
       }
       .nav_divider {
         vertical-align: middle;
@@ -125,6 +187,9 @@ body {
           span {
             margin-right: 20px;
           }
+          .tabs-list-right {
+            color: #bbbbbb;
+          }
         }
         .tabs-slide {
           height: 5px;
@@ -137,6 +202,7 @@ body {
             width: 42px;
             background-color: #ff6700;
             border-radius: 2px;
+            transition: all 0.5s;
           }
         }
         .tabs-content {

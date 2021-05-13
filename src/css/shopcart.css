@@ -124,44 +124,6 @@ body {
 .shopcar-main .main-container .main-wrap .goods-list .list-body .body-item .item-box .item-table .col-price {
   font-size: 16px;
 }
-.shopcar-main .main-container .main-wrap .goods-list .list-body .body-item .item-box .item-sub {
-  padding-top: 15px;
-  margin-left: 110px;
-  position: relative;
-}
-.shopcar-main .main-container .main-wrap .goods-list .list-body .body-item .item-box .item-sub .sub-box {
-  margin-bottom: 2px;
-}
-.shopcar-main .main-container .main-wrap .goods-list .list-body .body-item .item-box .item-sub .sub-box .sub-table {
-  display: flex;
-  background-color: #f5f5f5;
-  align-items: center;
-  padding: 15px 0;
-}
-.shopcar-main .main-container .main-wrap .goods-list .list-body .body-item .item-box .item-sub .sub-box .sub-table .col-img {
-  padding-left: 15px;
-}
-.shopcar-main .main-container .main-wrap .goods-list .list-body .body-item .item-box .item-sub .sub-box .sub-table .col-action {
-  font-size: 18px;
-}
-.shopcar-main .main-container .main-wrap .goods-list .list-body .body-item .item-box .item-sub .sub-box .sub-table .col-total {
-  color: #ff6700;
-  font-size: 16px;
-}
-.shopcar-main .main-container .main-wrap .goods-list .list-body .body-item .item-box .item-sub .sub-box .sub-table .col-price {
-  font-size: 16px;
-}
-.shopcar-main .main-container .main-wrap .goods-list .list-body .body-item .item-box .item-sub .sub-box .arrow {
-  position: absolute;
-  top: 5px;
-  left: 35px;
-  width: 0;
-  height: 0;
-  border-width: 0 11px 10px;
-  border-style: solid;
-  border-color: transparent transparent #f5f5f5;
-  overflow: hidden;
-}
 .shopcar-main .main-container .main-wrap .goods-list .list-body .body-item .item-box .service-info-content .service-info {
   margin-left: 110px;
   margin-bottom: 2px;
