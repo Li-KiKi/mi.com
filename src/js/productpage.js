@@ -1,18 +1,18 @@
 $(function() {
-    let id = location.search.split('=')[1];
-    $.ajax({
-        type: "get",
-        url: "../../interface/getItem.php",
-        data: {
-            id: id
-        },
-        dataType: "json",
-        success: function(res) {
-            let arr = res.picture.split('"')
-            let edition = res.edition.slice(1, -1).split(',').join('')
-            let color = res.color.slice(1, -1).split(',').join('')
-            let subs = res.subs.slice(1, -1).split(',').join('')
-            let temp = `
+        let id = location.search.split('=')[1];
+        $.ajax({
+            type: "get",
+            url: "../../interface/getItem.php",
+            data: {
+                id: id
+            },
+            dataType: "json",
+            success: function(res) {
+                let arr = res.picture.split('"')
+                let edition = res.edition.slice(1, -1).split(',').join('')
+                let color = res.color.slice(1, -1).split(',').join('')
+                let subs = res.subs.slice(1, -1).split(',').join('')
+                let temp = `
             <div class="main-container w">
             <div class="main-left">
                 <img src="../${arr[3]}" alt="big">
@@ -208,7 +208,7 @@ $(function() {
                             </li>
                             <li class="bcg" data-price="6">
                                 <div class="dot">
-                                    <div>√</div>
+                                    <div class="bgg">√</div>
                                 </div>
                                 <img src="../img/pms_yunkongjian.png" alt="">
                                 <div class="box">
@@ -250,47 +250,70 @@ $(function() {
                 </div>
             </div>
         </div>`
-            $('.product-main').append(temp)
-        }
-    });
-
-    $('.product-main').on('click', '.buy-service .service ul li', function(ev) {
-        $(this).addClass('bco').removeClass('bcg').siblings().removeClass('bco').addClass('bcg');
-        let subprice = 0;
-        $('.buy-service .service ul li').each(function() {
-            if ($(this).css('border') === "1px solid rgb(255, 103, 0)") {
-                subprice = subprice + parseInt(this.dataset.price)
+                $('.product-main').append(temp)
             }
-        })
-        let allprice = subprice + parseInt($('.main-right').children('p').eq(2).html())
-        $('.buy-price').html(`总计：${allprice}元`)
-    });
-    let num = 0;
-    $('.product-main').on('click', '.buy-btn button:nth-of-type(1)', function() {
-        ++num;
-        addItem(parseInt(location.search.split('=')[1]), parseInt($('.main-right').children('p').eq(2).html()), parseInt($('.buy-price').html().match(/\d+/g)[0]), num)
-    })
-
-    function addItem(id, price, allprice, num) {
-        let shop = cookie.get('shop')
-        let product = {
-            id,
-            price,
-            allprice,
-            num
-        }
-        if (shop) {
-            shop = JSON.parse(shop)
-            if (shop.some(el => el.id === id)) {
-                let _index = shop.findIndex(elm => elm.id == id);
-                shop[_index].num = num
+        });
+        // 服务选择
+        $('.product-main').on('click', '.buy-service .service ul li', function(ev) {
+            if ($(this).hasClass('bco')) {
+                $(this).removeClass('bco').addClass('bcg')
             } else {
+                $(this).addClass('bco').removeClass('bcg').siblings().removeClass('bco').addClass('bcg');
+            }
+            let subprice = 0;
+            $('.buy-service .service ul li').each(function() {
+                if ($(this).css('border').slice(-2, -1) === "0") {
+                    subprice = subprice + parseInt(this.dataset.price)
+                }
+            })
+            let allprice = subprice + parseInt($('.main-right').children('p').eq(2).html())
+            $('.buy-price').html(`总计：${allprice}元`)
+        });
+        // 版本选择
+        $('.product-main').on('click', '.selector ul li', function(ev) {
+            if ($(this).hasClass('bco')) {
+                $(this).removeClass('bco').addClass('bcg')
+            } else {
+                $(this).addClass('bco').removeClass('bcg').siblings().removeClass('bco').addClass('bcg');
+            }
+        });
+        // 设置cookie
+        let num = 0; //计数处理，商品的数量
+        $('.product-main').on('click', '.buy-btn button:nth-of-type(1)', function() {
+            ++num;
+            addItem(parseInt(location.search.split('=')[1]), parseInt($('.main-right').children('p').eq(2).html()), parseInt($('.buy-price').html().match(/\d+/g)[0]), num)
+        })
+
+        function addItem(id, price, allprice, num) {
+            let shop = cookie.get('shop')
+            let product = {
+                id,
+                price,
+                allprice,
+                num
+            }
+            if (shop) {
+                shop = JSON.parse(shop)
+                if (shop.some(el => el.id === id)) {
+                    let _index = shop.findIndex(elm => elm.id == id);
+                    shop[_index].num = num
+                } else {
+                    shop.push(product)
+                }
+            } else {
+                shop = [];
                 shop.push(product)
             }
-        } else {
-            shop = [];
-            shop.push(product)
+            cookie.set('shop', JSON.stringify(shop), 1)
         }
-        cookie.set('shop', JSON.stringify(shop), 1)
-    }
+    })
+    // 浮动条
+$(function() {
+    $(window).on('scroll', function() {
+        if ($(document).scrollTop() > 150) {
+            $('.float-2').css('top', 0)
+        } else {
+            $('.float-2').css('top', -70)
+        }
+    })
 })

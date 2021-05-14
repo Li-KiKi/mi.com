@@ -50,25 +50,32 @@ $(function() {
                     cookie.set('shop', JSON.stringify(res), 1);
                     location.reload();
                 })
-                $('.body-item').on('click', '.change-num p', function() {
+
+                // 在购物车里改变数量之后改变cookie
+                $('.body-item').on('click', '.change-num p', function() { // 采用事件委托，选择加减按钮p元素
                     if ($(this).index()) {
                         shop.forEach((el) => {
                             if (el.id == $(this).attr('data-ids')) {
                                 el.num = el.num + 1
+                                $(this).siblings('span').html(`${el.num}`)
+                                $(this).parents('.col-num').next().html(`${parseInt($(this).parents('.col-num').prev().html())*el.num}元`)
                             }
                         });
                         cookie.set('shop', JSON.stringify(shop), 1);
-                        location.reload();
                     } else {
                         shop.forEach((el) => {
                             if (el.id == $(this).attr('data-ids')) {
-                                if (el.num != 0) el.num = el.num - 1
+                                if (el.num != 0) {
+                                    el.num = el.num - 1
+                                    $(this).siblings('span').html(`${el.num}`)
+                                    $(this).parents('.col-num').next().html(`${parseInt($(this).parents('.col-num').prev().html())*el.num}元`)
+                                }
                             }
                         });
                         cookie.set('shop', JSON.stringify(shop), 1);
-                        location.reload();
                     }
                 })
+
                 $('.shopcar-main').on('click', '.col-check', function() {
                     if (!$('.col-check').index(this)) {
                         if ($(this).children().hasClass('check-o')) {

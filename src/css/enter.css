@@ -238,6 +238,7 @@ body {
   height: 24px;
 }
 .layout .layout_container .layout_card .ant-tabs .tabs-content .tabs-btn {
+  width: 100%;
   color: #fff;
   cursor: pointer;
   line-height: 60px;

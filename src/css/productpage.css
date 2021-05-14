@@ -1,11 +1,18 @@
+.nav-category .category {
+  display: none;
+}
+.nav-category:hover .category {
+  display: block;
+}
 .product-float {
   position: relative;
-  z-index: 20;
+  z-index: 10;
 }
 .product-float > div {
   border-top: 1px solid #e0e0e0;
   border-bottom: 1px solid #e0e0e0;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
 }
 .product-float > div .nav-bar {
   height: 63px;
@@ -35,6 +42,14 @@
 }
 .product-float > div .nav-bar .con a:hover {
   color: #ff6700;
+}
+.product-float .float-2 {
+  position: fixed;
+  top: -70px;
+  left: 0;
+  right: 0;
+  z-index: 10px;
+  transition: all 0.5s ease;
 }
 .product-main .main-container {
   display: flex;
@@ -106,16 +121,11 @@
   margin-top: 10px;
   line-height: 42px;
   height: 42px;
-  border: 1px solid #e0e0e0;
   cursor: pointer;
   width: 292px;
   font-size: 16px;
   text-align: center;
   transition: all 0.5s ease;
-}
-.product-main .main-container .main-right .buy-option ul li:hover {
-  border-color: #ff6700;
-  color: #ff6700;
 }
 .product-main .main-container .main-right .buy-service .service {
   margin-bottom: 30px;
@@ -287,4 +297,10 @@
 }
 .bcg {
   border: 1px solid #e0e0e0;
+}
+.bgo {
+  background-color: #ff6700;
+}
+.bgg {
+  background-color: #fff;
 }

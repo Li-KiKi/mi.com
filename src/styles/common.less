@@ -20,7 +20,7 @@
           color: #fff;
         }
         &:hover > span {
-          opacity: 1;
+          display: block;
         }
         span {
           width: 124px;
@@ -30,7 +30,7 @@
           top: 28px;
           left: -40px;
           z-index: 7;
-          opacity: 0;
+          display: none;
           box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
           text-align: center;
           padding-top: 12px;
@@ -488,10 +488,9 @@
             width: 234px;
             height: 460px;
             font-size: 14px;
-            z-index: 3;
+            z-index: 11;
             > ul {
               padding: 20px 0;
-              color: #fff;
               background: rgba(105, 101, 101, 0.6);
               > li {
                 div {
@@ -561,7 +560,7 @@
           }
           .item-children {
             position: absolute;
-            z-index: 3;
+            z-index: 11;
             top: 100px;
             left: 0;
             right: 0;

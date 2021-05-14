@@ -60,45 +60,47 @@
                             </div>
                             <p>成功注册账号后，国家和地区将不能修改</p>
                             <p>手机号码</p>
-                            <div class="phone">
-                                <div class="phone-input">
-                                    <div class="phone-selector">
-                                        +86 <span></span>
-                                    </div>
-                                    <input type="text" placeholder="请输入手机号" class="phone-text">
-                                    <div class="selector-option hide">
-                                        <input type="text">
-                                        <div>
-                                            <div class="selector-header">A</div>
-                                            <ul class="selector-list">
-                                                <li>阿富汗</li>
-                                                <li>阿尔巴尼亚</li>
-                                                <li>阿尔及利亚</li>
-                                                <li>美属萨摩亚</li>
-                                                <li>安道尔</li>
-                                                <li>安哥拉</li>
-                                                <li>安圭拉</li>
-                                                <li>南极洲</li>
-                                                <li>安提瓜和巴布达</li>
-                                                <li>阿根廷</li>
-                                                <li>亚美尼亚</li>
-                                                <li>阿鲁巴</li>
-                                                <li>澳大利亚</li>
-                                                <li>中国</li>
-                                            </ul>
+                            <form action="../../interface/login.php" method="POST">
+                                <div class="phone">
+                                    <div class="phone-input">
+                                        <div class="phone-selector">
+                                            +86 <span></span>
+                                        </div>
+                                        <input type="tel" placeholder="请输入手机号" class="phone-text" id="phone" name="phone">
+                                        <div class="selector-option hide">
+                                            <input type="text">
+                                            <div>
+                                                <div class="selector-header">A</div>
+                                                <ul class="selector-list">
+                                                    <li>阿富汗</li>
+                                                    <li>阿尔巴尼亚</li>
+                                                    <li>阿尔及利亚</li>
+                                                    <li>美属萨摩亚</li>
+                                                    <li>安道尔</li>
+                                                    <li>安哥拉</li>
+                                                    <li>安圭拉</li>
+                                                    <li>南极洲</li>
+                                                    <li>安提瓜和巴布达</li>
+                                                    <li>阿根廷</li>
+                                                    <li>亚美尼亚</li>
+                                                    <li>阿鲁巴</li>
+                                                    <li>澳大利亚</li>
+                                                    <li>中国</li>
+                                                </ul>
+                                            </div>
                                         </div>
                                     </div>
+                                    <div class="phone-tip  phone-tip1  hide">
+                                        <em>!</em>
+                                        <span class="phone-input">请输入手机号码</span>
+                                    </div>
+                                    <div class="phone-tip  phone-tip2  hide">
+                                        <em>!</em>
+                                        <span>手机号格式错误</span>
+                                    </div>
                                 </div>
-                                <div class="phone-tip  phone-tip1  hide">
-                                    <em>!</em>
-                                    <span>请输入手机号码</span>
-                                </div>
-                                <div class="phone-tip  phone-tip2  hide">
-                                    <em>!</em>
-                                    <span>手机号格式错误</span>
-                                </div>
-                            </div>
-                            <button>立即注册</button>
+                                <button class="res-btn" type="submit">立即注册</button>
+                            </form>
                         </div>
                         <div class="input-bottom">
                             <div class="msg">

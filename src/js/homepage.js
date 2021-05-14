@@ -15,14 +15,12 @@ $(function() {
             elms.btns = $('.slide-btn').children('div');
             // 设置播放索引
             elms.index = 0;
-
             // 悬停事件
             $('.mi_banner').hover(function() {
                 clearInterval(timer);
             }, function() {
                 timer = setInterval(start.bind(null, 1), 3000);
             });
-
             // 按钮点击事件
             elms.btns.on('click', function() {
                 if (elms.btns.index(this)) {
@@ -126,22 +124,20 @@ $(function() {
     })
     // 产品列表切换
 $(function() {
-    $('.mi_jiadian .row-select-btn>span').on('mouseover', function() {
-        $('.mi_jiadian .row-right').addClass('hide').eq($(this).index()).removeClass('hide')
-        $(this).addClass('fc').siblings().removeClass('fc')
-        $(this).children().css('opacity', 1)
-        $(this).siblings().children().css('opacity', 0)
+        $('.mi_jiadian .row-select-btn>span').on('mouseover', function() {
+            $('.mi_jiadian .row-right').addClass('hide').eq($(this).index()).removeClass('hide')
+            $(this).addClass('fc').siblings().removeClass('fc')
+            $(this).children().css('opacity', 1)
+            $(this).siblings().children().css('opacity', 0)
+        })
+        $('.mi_zhineng .row-select-btn>span').on('mouseover', function() {
+            $('.mi_zhineng .row-right').addClass('hide').eq($(this).index()).removeClass('hide')
+            $(this).addClass('fc').siblings().removeClass('fc')
+            $(this).children().css('opacity', 1)
+            $(this).siblings().children().css('opacity', 0)
+        })
     })
-    $('.mi_zhineng .row-select-btn>span').on('mouseover', function() {
-        $('.mi_zhineng .row-right').addClass('hide').eq($(this).index()).removeClass('hide')
-        $(this).addClass('fc').siblings().removeClass('fc')
-        $(this).children().css('opacity', 1)
-        $(this).siblings().children().css('opacity', 0)
-    })
-})
-
-
-
+    // ajax请求数据
 $(function() {
     $.ajax({
         type: "get",

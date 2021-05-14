@@ -21,23 +21,22 @@ $(function() {
     })
     // nav二级菜单
 $(function() {
-    $('.nav-item:lt(7)').on({
-        mouseenter: function() {
-            $('.item-children').stop(true);
-            $('.item-children').delay(200).animate({
-                height: '230px'
-            }, 300);
-        },
-        mouseleave: function() {
-            $('.item-children').finish();
-            $('.item-children').delay(200).animate({
-                height: '0px'
-            }, 300)
-        }
+        $('.nav-item:lt(7)').on({
+            mouseenter: function() {
+                $('.item-children').stop(true);
+                $('.item-children').delay(200).animate({
+                    height: '230px'
+                }, 300);
+            },
+            mouseleave: function() {
+                $('.item-children').finish();
+                $('.item-children').delay(200).animate({
+                    height: '0px'
+                }, 300)
+            }
+        })
     })
-})
-
-// 侧边固定菜单
+    // 侧边固定菜单
 $(function() {
     $(window).on('scroll', function() {
         if ($(document).scrollTop() > 1000) {

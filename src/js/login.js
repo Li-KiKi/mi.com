@@ -31,11 +31,17 @@ $(function() {
         if ($('.phone-text').val()) {
             reg.test($('.phone-text').val()) ? changeBack(1) : changeTo(1);
         }
+
     })
     $('.phone-text').keypress(function() {
         if ($('.phone-text').val()) {
             changeBack(0)
         }
+        console.log($('.phone-text').val().length)
+        if (($('.phone-text').val().length != 10) && $('.phone-tip').eq(1).hasClass('hide')) {
+            $('.res-btn').attr('type', 'button')
+        } else {
+            $('.res-btn').attr('type', 'submit')
+        }
     })
-
 })

@@ -20,6 +20,10 @@ $(function() {
             $(this).siblings('p').css('color', '#aaaaaa')
             $(this).parent().next().addClass('hide')
         }
+        console.log($('.username-input').val() && $('.password-input').val())
+        if ($('.username-input').val() && $('.password-input').val()) {
+            $('.tabs-btn').attr('type', 'submit')
+        }
     })
     $('.tabs-userinput').one('click', function() {
         $(this).css('background-color', '#fff')
