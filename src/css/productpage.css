@@ -246,10 +246,10 @@
 .product-main .main-container .main-right .buy-btn {
   margin: 10px 0 30px 0;
 }
-.product-main .main-container .main-right .buy-btn a {
+.product-main .main-container .main-right .buy-btn button {
   display: inline-block;
 }
-.product-main .main-container .main-right .buy-btn a:nth-of-type(1) {
+.product-main .main-container .main-right .buy-btn button:nth-of-type(1) {
   width: 298px;
   height: 52px;
   line-height: 52px;
@@ -259,7 +259,7 @@
   text-align: center;
   margin-right: 20px;
 }
-.product-main .main-container .main-right .buy-btn a:nth-of-type(2) {
+.product-main .main-container .main-right .buy-btn button:nth-of-type(2) {
   width: 140px;
   height: 52px;
   line-height: 52px;

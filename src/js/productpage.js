@@ -8,7 +8,6 @@ $(function() {
         },
         dataType: "json",
         success: function(res) {
-            console.log(res)
             let arr = res.picture.split('"')
             let edition = res.edition.slice(1, -1).split(',').join('')
             let color = res.color.slice(1, -1).split(',').join('')
@@ -243,8 +242,8 @@ $(function() {
                     <div class="buy-price">总计：${res.price}元</div>
                 </div>
                 <div class="buy-btn">
-                    <a href="#">加入购物车</a>
-                    <a href="#">喜欢</a>
+                    <button>加入购物车</button>
+                    <button>喜欢</button>
                 </div>
                 <div class="buy-img">
                     <img src="../img/QQ截图20210502152628.png" alt="">
@@ -254,6 +253,7 @@ $(function() {
             $('.product-main').append(temp)
         }
     });
+
     $('.product-main').on('click', '.buy-service .service ul li', function(ev) {
         $(this).addClass('bco').removeClass('bcg').siblings().removeClass('bco').addClass('bcg');
         let subprice = 0;
@@ -265,4 +265,32 @@ $(function() {
         let allprice = subprice + parseInt($('.main-right').children('p').eq(2).html())
         $('.buy-price').html(`总计：${allprice}元`)
     });
+    let num = 0;
+    $('.product-main').on('click', '.buy-btn button:nth-of-type(1)', function() {
+        ++num;
+        addItem(parseInt(location.search.split('=')[1]), parseInt($('.main-right').children('p').eq(2).html()), parseInt($('.buy-price').html().match(/\d+/g)[0]), num)
+    })
+
+    function addItem(id, price, allprice, num) {
+        let shop = cookie.get('shop')
+        let product = {
+            id,
+            price,
+            allprice,
+            num
+        }
+        if (shop) {
+            shop = JSON.parse(shop)
+            if (shop.some(el => el.id === id)) {
+                let _index = shop.findIndex(elm => elm.id == id);
+                shop[_index].num = num
+            } else {
+                shop.push(product)
+            }
+        } else {
+            shop = [];
+            shop.push(product)
+        }
+        cookie.set('shop', JSON.stringify(shop), 1)
+    }
 })

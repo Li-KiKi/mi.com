@@ -88,6 +88,10 @@ body {
   height: 80px;
   padding-right: 40px;
 }
+.shopcar-main .main-container .main-wrap .goods-list .list-body .body-item .item-box .item-table .col-img img {
+  height: 80px;
+  width: 80px;
+}
 .shopcar-main .main-container .main-wrap .goods-list .list-body .body-item .item-box .item-table .col-num .change-num {
   width: 148px;
   height: 38px;
@@ -96,17 +100,21 @@ body {
   background-color: #fff;
   display: flex;
 }
-.shopcar-main .main-container .main-wrap .goods-list .list-body .body-item .item-box .item-table .col-num .change-num a {
-  display: block;
+.shopcar-main .main-container .main-wrap .goods-list .list-body .body-item .item-box .item-table .col-num .change-num p {
+  cursor: pointer;
   width: 36px;
   height: 36px;
   line-height: 36px;
   color: #757575;
-  font-size: 20px;
+  font-size: 24px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-.shopcar-main .main-container .main-wrap .goods-list .list-body .body-item .item-box .item-table .col-num .change-num input {
+.shopcar-main .main-container .main-wrap .goods-list .list-body .body-item .item-box .item-table .col-num .change-num p:hover {
+  color: #ff6700;
+}
+.shopcar-main .main-container .main-wrap .goods-list .list-body .body-item .item-box .item-table .col-num .change-num span {
+  display: inline-block;
   width: 76px;
   height: 36px;
   line-height: 36px;
@@ -237,18 +245,22 @@ body {
   display: inline-block;
   width: 18px;
   height: 18px;
+  color: #fff;
   line-height: 18px;
-  border: 1px solid #e0e0e0;
   margin-left: 24px;
   margin-right: 15px;
-  background-color: #fff;
-  color: black;
   font-size: 15px;
   text-align: center;
   vertical-align: middle;
   position: relative;
   top: -1px;
   cursor: pointer;
+  border: 1px solid #e0e0e0;
+  background-color: #fff;
+}
+.shopcar-main .main-container .main-wrap .col-check .check-o {
+  border: 1px solid #ff6700;
+  background-color: #ff6700;
 }
 .shopcar-main .main-container .main-wrap .col-img {
   width: 120px;
@@ -272,6 +284,7 @@ body {
   text-align: right;
 }
 .shopcar-main .main-container .main-wrap .col-action {
+  cursor: pointer;
   width: 80px;
   text-align: center;
 }

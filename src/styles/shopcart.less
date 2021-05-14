@@ -90,6 +90,10 @@ body {
                 .col-img {
                   height: 80px;
                   padding-right: 40px;
+                  img {
+                    height: 80px;
+                    width: 80px;
+                  }
                 }
                 .col-num {
                   .change-num {
@@ -99,17 +103,21 @@ body {
                     text-align: center;
                     background-color: #fff;
                     display: flex;
-                    a {
-                      display: block;
+                    p {
+                      cursor: pointer;
                       width: 36px;
                       height: 36px;
                       line-height: 36px;
                       color: #757575;
-                      font-size: 20px;
+                      font-size: 24px;
                       -webkit-transition: all 0.3s;
                       transition: all 0.3s;
+                      &:hover {
+                        color: #ff6700;
+                      }
                     }
-                    input {
+                    span {
+                      display: inline-block;
                       width: 76px;
                       height: 36px;
                       line-height: 36px;
@@ -250,18 +258,22 @@ body {
           display: inline-block;
           width: 18px;
           height: 18px;
+          color: #fff;
           line-height: 18px;
-          border: 1px solid #e0e0e0;
           margin-left: 24px;
           margin-right: 15px;
-          background-color: #fff;
-          color: black;
           font-size: 15px;
           text-align: center;
           vertical-align: middle;
           position: relative;
           top: -1px;
           cursor: pointer;
+          border: 1px solid #e0e0e0;
+          background-color: #fff;
+        }
+        .check-o {
+          border: 1px solid #ff6700;
+          background-color: #ff6700;
         }
       }
       .col-img {
@@ -286,6 +298,7 @@ body {
         text-align: right;
       }
       .col-action {
+        cursor: pointer;
         width: 80px;
         text-align: center;
       }
