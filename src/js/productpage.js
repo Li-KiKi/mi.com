@@ -1,3 +1,7 @@
+import { $ } from './library/jquery.js';
+import { common } from './common.js'
+import { cookie } from './library/cookie.js';
+
 $(function() {
         let id = location.search.split('=')[1];
         $.ajax({
@@ -308,6 +312,7 @@ $(function() {
         }
     })
     // 浮动条
+
 $(function() {
     $(window).on('scroll', function() {
         if ($(document).scrollTop() > 150) {
@@ -317,3 +322,20 @@ $(function() {
         }
     })
 })
+$(function() {
+    $('#search').on('click', function() {
+        $('.search-keyword').removeClass('hide')
+        $('#search').css('border', '1px solid #ff6700')
+        $('#submit').css('border', '1px solid #ff6700')
+        $('.search-keyword').css('border', '1px solid #ff6700')
+    })
+    $('#search').blur(function() {
+        if (!$('.search-keyword').hasClass('hide')) {
+            $('.search-keyword').addClass('hide')
+            $('#search').css('border', '1px solid #e0e0e0')
+            $('#submit').css('border', '1px solid #e0e0e0')
+            $('.search-keyword').css('border', '1px solid #e0e0e0')
+        }
+    })
+})
+common();

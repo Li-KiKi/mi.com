@@ -1,3 +1,4 @@
+import { $ } from './library/jquery.js';
 $(function() {
     let blur = null;
     $('.login-switch').on('click', function() {

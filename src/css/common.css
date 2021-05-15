@@ -540,7 +540,7 @@
   float: left;
 }
 .mi_nav .nav-container .nav-list > ul .nav-item a {
-  padding: 26px 10px 38px;
+  padding: 26px 10px 38px ;
 }
 .mi_nav .nav-container .nav-list > ul .nav-item .item-children {
   position: absolute;
@@ -551,6 +551,7 @@
   height: 0px;
   background-color: #fff;
   overflow: hidden;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
 }
 .mi_nav .nav-container .nav-list > ul .nav-item .item-children .children-list {
   display: flex;
@@ -621,7 +622,7 @@
 .mi_nav .nav-container .nav-search form .search-keyword {
   position: absolute;
   left: 0;
-  top: 50px;
+  top: 49px;
   z-index: 20;
   width: 245px;
   border: 1px solid #e0e0e0;

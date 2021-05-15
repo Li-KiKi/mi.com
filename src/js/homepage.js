@@ -1,3 +1,6 @@
+import { $ } from './library/jquery.js';
+import { common } from './common.js'
+import './library/jquery.lazyload.js';
 // banner轮播图
 $(function() {
         // 抽象功能(将所有可能要执行的动作都声明成变量)
@@ -65,62 +68,85 @@ $(function() {
         }
         main();
     })
+    // nav 搜索框
+$(function() {
+        $('#search').on('click', function() {
+            $('.search-keyword').removeClass('hide')
+            $('#search').css('border', '1px solid #ff6700')
+            $('#submit').css('border', '1px solid #ff6700')
+            $('.search-keyword').css('border', '1px solid #ff6700')
+        })
+        $('#search').blur(function() {
+            if (!$('.search-keyword').hasClass('hide')) {
+                $('.search-keyword').addClass('hide')
+                $('#search').css('border', '1px solid #e0e0e0')
+                $('#submit').css('border', '1px solid #e0e0e0')
+                $('.search-keyword').css('border', '1px solid #e0e0e0')
+            }
+        })
+    })
     // 计时器
+$(function() {
+        function NextTime(next, cb) {
+            var t;
+            (function ft() {
+                var dif = (next.getTime() - (new Date()).getTime()) / 1000;
+                if (dif > 0) {
+                    t = setTimeout(ft, 1000);
+                    if (cb)
+                        cb(Math.floor(dif % 86400 / 3600), Math.floor(dif % 3600 / 60), Math.floor(dif % 60));
+                } else {
+                    clearTimeout(t);
+                }
+            })();
+            return function() {
+                clearTimeout(t);
+            };
+        }
+
+        function lpad(num, n) {
+            var len = num.toString().length;
+            while (len < n) {
+                num = "0" + num;
+                len++;
+            }
+            return num;
+        }
+        var now = new Date();
+        var next = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1);
+        new NextTime(next, function(hour, minute, second) {
+            $('.countdown').html(`<span>${lpad(hour, 2)}</span><i>:</i><span>${lpad(minute, 2)}</span><i>:</i><span>${lpad(second, 2)}</span>`)
+        });
+    })
     // 秒杀滑动
 $(function() {
-        let slide = $('.flashsale-slide');
-        let start2 = null;
-
-        function thottle(callback, delay) {
-            let prev = 0; // 用于记录上次的执行时间
-            return function() {
-                // console.log(this);
-                let now = Date.now(); // 获得当前时间
-
-                if (now - prev >= delay) {
-                    callback.apply(this, arguments); // 调用回调函数
-                    prev = now; // 更新上一次的执行时间
-                }
+        $('.btn-right').on('click', function() {
+            if ($('.flashsale-slide').css('left') == '0px') {
+                $('.flashsale-slide').animate({
+                    left: '-992px'
+                }, 1000)
             }
-        }
-
-
-        if (slide.position().left == 0) {
-            $(this).css('color', 'black')
-        } else {
-            $('.btn-left').on('click', thottle(function() {
-                start2(0)
-            }, 600))
-            $(this).addClass('fc')
-        }
-
-
-        if (slide.position().left == -992) {
-            $(this).css('color', 'black')
-        } else {
-            $('.btn-right').on('click', thottle(function() {
-                start2(1)
-            }, 600))
-            $(this).addClass('fc')
-        }
-
-
-        start2 = function(direction) {
-            let left = `-992`;
-            if (!direction) {
-                left = `0`;
+        })
+        $('.btn-left').on('click', function() {
+            if ($('.flashsale-slide').css('left') == '-992px') {
+                $('.flashsale-slide').animate({
+                    left: '0px'
+                }, 1000)
             }
-            slide.animate({
-                left: left
-            }, 600, function() {
-                if (slide.position().left == 0) {
-                    $('.btn-left').off('click')
-                }
-                if (slide.position().left == -992) {
-                    $('.btn-right').off('click')
-                }
-            });
-        };
+        })
+        let timer = setInterval(function() {
+            if ($('.flashsale-slide').css('left') == '0px') {
+                $('.flashsale-slide').animate({
+                    left: '-992px'
+                }, 1000)
+            }
+            if ($('.flashsale-slide').css('left') == '-992px') {
+                $('.flashsale-slide').animate({
+                    left: '0px'
+                }, 1000)
+            }
+        }, 6000)
+
     })
     // 产品列表切换
 $(function() {
@@ -139,15 +165,15 @@ $(function() {
     })
     // ajax请求数据
 $(function() {
-    $.ajax({
-        type: "get",
-        url: "../../interface/getData.php",
-        dataType: "json",
-        success: function(res) {
-            let temp = '';
-            res.forEach((elm, i) => {
-                let arr = elm.showpicture.split('"')
-                temp += `<li>
+        $.ajax({
+            type: "get",
+            url: "../../interface/getData.php",
+            dataType: "json",
+            success: function(res) {
+                let temp = '';
+                res.forEach((elm, i) => {
+                    let arr = elm.showpicture.split('"')
+                    temp += `<li>
                 <a href="../html/productpage.html?id=${elm.id}">
                     <img class="lazy" src="../${arr[3]}" alt="small" style="height: 160px;width: 160px;">
                     <h3 class="title">${elm.title}</h3>
@@ -155,8 +181,15 @@ $(function() {
                     <p class="price">${elm.showprice}</p>
                 </a>
             </li>`
-            })
-            $('.right-list-phone').append(temp)
-        }
+                })
+                $('.right-list-phone').append(temp)
+            }
+        });
+    })
+    // 懒加载
+$(function() {
+    $("img.lazy").lazyload({
+        effect: "fadeIn"
     });
-})
+});
+common()

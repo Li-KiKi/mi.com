@@ -1,3 +1,5 @@
+import { $ } from './library/jquery.js';
+import { cookie } from './library/cookie.js';
 $(function() {
     let shop = cookie.get('shop');
     if (shop) {
