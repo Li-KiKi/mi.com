@@ -274,12 +274,16 @@
   border: 1px solid #e0e0e0;
 }
 .mi_main .mi_flashsale .box-bd .row .flashsale-btn div {
+  cursor: pointer;
   width: 30px;
   height: 23px;
   line-height: 20px;
   text-align: center;
   font-size: 22px;
   font-weight: 600;
+}
+.mi_main .mi_flashsale .box-bd .row .flashsale-btn div:hover {
+  color: #ff6700;
 }
 .mi_main .mi_flashsale .box-bd .row .flashsale-btn div span {
   display: block;
@@ -417,6 +421,41 @@
 .mi_main .box-bd .row .row-right {
   width: 978px;
   float: left;
+}
+.mi_main .box-bd .row .row-right-last {
+  width: 1226px;
+}
+.mi_main .box-bd .row .row-right-last ul li {
+  width: 296px;
+}
+.mi_main .box-bd .row .row-right-last ul li a {
+  padding-top: 0;
+  position: relative;
+}
+.mi_main .box-bd .row .row-right-last ul li a div {
+  width: 50px;
+  height: 30px;
+  border-radius: 15px;
+  position: absolute;
+  left: 20px;
+  bottom: 135px ;
+  border: 2px solid #fff;
+  transition: all 0.3s;
+}
+.mi_main .box-bd .row .row-right-last ul li a div::after {
+  content: "";
+  width: 0px;
+  height: 0px;
+  border-width: 8px 10px 8px 10px;
+  border-color: transparent #fff transparent transparent;
+  border-style: solid;
+  position: absolute;
+  left: 7px;
+  top: 5px;
+}
+.mi_main .box-bd .row .row-right-last ul li a:hover div {
+  background-color: #ff6700;
+  border: 2px solid #ff6700;
 }
 .mi_main .box-bd .row .row-btn {
   position: absolute;

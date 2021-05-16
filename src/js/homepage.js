@@ -120,6 +120,7 @@ $(function() {
     })
     // 秒杀滑动
 $(function() {
+        let timer = null;
         $('.btn-right').on('click', function() {
             if ($('.flashsale-slide').css('left') == '0px') {
                 $('.flashsale-slide').animate({
@@ -134,7 +135,23 @@ $(function() {
                 }, 1000)
             }
         })
-        let timer = setInterval(function() {
+        $('.flashsale-btn').hover(function() {
+            clearInterval(timer)
+        }, function() {
+            timer = setInterval(function() {
+                if ($('.flashsale-slide').css('left') == '0px') {
+                    $('.flashsale-slide').animate({
+                        left: '-992px'
+                    }, 1000)
+                }
+                if ($('.flashsale-slide').css('left') == '-992px') {
+                    $('.flashsale-slide').animate({
+                        left: '0px'
+                    }, 1000)
+                }
+            }, 6000)
+        })
+        timer = setInterval(function() {
             if ($('.flashsale-slide').css('left') == '0px') {
                 $('.flashsale-slide').animate({
                     left: '-992px'

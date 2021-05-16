@@ -295,12 +295,16 @@
           height: 25px;
           border: 1px solid #e0e0e0;
           div {
+            cursor: pointer;
             width: 30px;
             height: 23px;
             line-height: 20px;
             text-align: center;
             font-size: 22px;
             font-weight: 600;
+            &:hover {
+              color: #ff6700;
+            }
             span {
               display: block;
               transform: scaleX(0.6);
@@ -453,6 +457,43 @@
       .row-right {
         width: 978px;
         float: left;
+      }
+      .row-right-last {
+        width: 1226px;
+        ul {
+          li {
+            width: 296px;
+            a{
+              padding-top: 0;
+              position: relative;
+              div {
+                width: 50px;
+                height: 30px;
+                border-radius: 15px;
+                position: absolute;
+                left: 20px;
+                bottom:135px ;
+                border: 2px solid #fff;
+                transition: all 0.3s ;
+                &::after{
+                  content: "";
+                  width: 0px;
+                  height: 0px;
+                  border-width:8px 10px 8px 10px;
+                  border-color: transparent #fff transparent transparent;
+                  border-style: solid;
+                  position: absolute;
+                  left: 7px;
+                  top: 5px;
+                }
+              }
+              &:hover div {
+                background-color: #ff6700;
+                border: 2px solid #ff6700;
+              }
+            }
+          }
+        }
       }
       .row-btn {
         position: absolute;

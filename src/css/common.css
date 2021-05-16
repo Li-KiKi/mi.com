@@ -542,6 +542,11 @@
 .mi_nav .nav-container .nav-list > ul .nav-item a {
   padding: 26px 10px 38px ;
 }
+.mi_nav .nav-container .nav-list > ul .nav-item:hover .item-children {
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  border-top: 1px solid #e0e0e0 !important;
+  z-index: 21;
+}
 .mi_nav .nav-container .nav-list > ul .nav-item .item-children {
   position: absolute;
   z-index: 11;
@@ -551,7 +556,8 @@
   height: 0px;
   background-color: #fff;
   overflow: hidden;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  border-top: 1px solid transparent;
+  transition: all 0.7s;
 }
 .mi_nav .nav-container .nav-list > ul .nav-item .item-children .children-list {
   display: flex;
@@ -636,17 +642,6 @@
 }
 .mi_nav .nav-container .nav-search form .search-keyword ul li:hover {
   background-color: #e5e5e5;
-}
-.mi_nav .nav-downmenu {
-  position: absolute;
-  z-index: 3;
-  top: 100px;
-  left: 0;
-  right: 0;
-  border-top: 1px solid #e5e5e5;
-  height: 0px;
-  background-color: #fff;
-  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.18);
 }
 .mi_footer {
   background-color: #fff;

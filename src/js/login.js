@@ -11,8 +11,12 @@ $(function() {
         $('.phone-tip').eq(ind).addClass('hide')
         $('.phone-input').css('border', '1px solid #e0e0e0')
     }
-    $('.country-icon').on('click', function() {
+    $('.country-icon').on('click', function(ev) {
         $('.country-selector').toggleClass('hide');
+        ev.stopPropagation()
+    })
+    $(document).click(function(ev) {
+        $('.country-selector').addClass('hide');
     })
     $('.phone-selector').on('click', function() {
         $('.selector-option').toggleClass('hide');

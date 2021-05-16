@@ -26,19 +26,15 @@ function common() {
             $('.nav-item:lt(7)').on({
                 mouseenter: function() {
                     $('.item-children').stop(true);
-                    $('.item-children').css('border-top', '1px solid #e0e0e0')
                     $('.item-children').delay(200).animate({
                         height: '230px'
                     }, 300);
                 },
                 mouseleave: function() {
                     $('.item-children').finish();
-
                     $('.item-children').delay(200).animate({
                         height: '0px'
-                    }, 300, function() {
-                        $('.item-children').css('border-top', '1px solid transparent')
-                    })
+                    }, 300)
                 }
             })
         })

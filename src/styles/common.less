@@ -558,6 +558,11 @@
           a {
             padding: 26px 10px 38px ;
           }
+          &:hover .item-children {
+            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+            border-top: 1px solid #e0e0e0 !important;
+            z-index: 21;
+          }
           .item-children {
             position: absolute;
             z-index: 11;
@@ -567,7 +572,8 @@
             height: 0px;
             background-color: #fff;
             overflow: hidden;
-            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+            border-top: 1px solid transparent;
+            transition: all 0.7s;
             .children-list {
               display: flex;
               li {
@@ -660,17 +666,6 @@
         }
       }
     }
-  }
-  .nav-downmenu {
-    position: absolute;
-    z-index: 3;
-    top: 100px;
-    left: 0;
-    right: 0;
-    border-top: 1px solid #e5e5e5;
-    height: 0px;
-    background-color: #fff;
-    box-shadow: 0 3px 4px rgb(0 0 0 / 18%);
   }
 }
 // 通用底部

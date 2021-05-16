@@ -76,6 +76,7 @@ $(function() {
                         });
                         cookie.set('shop', JSON.stringify(shop), 1);
                     }
+                    ssss()
                 })
 
                 $('.shopcar-main').on('click', '.col-check', function() {
@@ -96,6 +97,9 @@ $(function() {
                             $('.col-check:eq(0)').children().addClass('check-o')
                         }
                     })
+                    ssss();
+                })
+                let ssss = function() {
                     let num = 0;
                     let price = 0;
                     $('.col-check:gt(0)').children().each(function() {
@@ -109,7 +113,7 @@ $(function() {
                         $('.bar-left').children('span').children('i').eq(1).html(`${num}`)
                         $('.total-price').children('em').html(`${price}`)
                     })
-                })
+                }
             }
         });
     }
